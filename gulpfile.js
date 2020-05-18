@@ -51,8 +51,10 @@ function scssTask(){
 function jsTask(){
     return src([
 		paths.dev.js,
-		paths.dev.js + 'bootstrap.js'
-        //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
+        paths.dev.js + 'bootstrap.js',
+        './node_modules/jquery/dist/jquery.slim.js',
+        './node_modules/popper.js/dist/umd/popper.js',
+        './node_modules/bootstrap/dist/js/bootstrap.js',
         ])
         .pipe(concat('app.min.js'))
         .pipe(uglify())
