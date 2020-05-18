@@ -6,11 +6,10 @@ body {
 	height: 100vh;
 	margin: 0;
 
-.nav-item, .links {
+.nav-item, .frontlinks {
 
 	a {
-		color: #636b6f;
-		padding: 0 25px;
+		color: #636b6f;	
 		font-size: 13px;
 		font-weight: 600;
 		letter-spacing: .1rem;
@@ -18,6 +17,17 @@ body {
 		text-transform: uppercase;
 	}
 }
+
+.frontlinks {
+ 
+	a {		
+		padding: 0 25px;		
+	}
+}
+
+
+
+
 
 .navbar-brand {
 		color: #636b6f;

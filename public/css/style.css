@@ -7168,14 +7168,15 @@ body {
   font-weight: 200;
   height: 100vh;
   margin: 0; }
-  body .nav-item a, body .links a {
+  body .nav-item a, body .frontlinks a {
     color: #636b6f;
-    padding: 0 25px;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: .1rem;
     text-decoration: none;
     text-transform: uppercase; }
+  body .frontlinks a {
+    padding: 0 25px; }
   body .navbar-brand {
     color: #636b6f;
     font-weight: 400;
