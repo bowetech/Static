@@ -1,0 +1,25 @@
+{
+    "name": "BoweTech/static-framework",
+    "description": "Static Framework.",
+    "keywords": [
+        "Framework",
+        "BoweTech",
+        "PHP Framework"
+    ],
+    "license": "MIT",
+    "homepage": "https://static.bowetech.com",
+    "authors": [
+        {
+            "name": "Clive Stewart",
+            "email": "clivestewart@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "bowetech/framework": "^0.0.3"
+    }
+}

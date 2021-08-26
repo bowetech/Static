@@ -1,0 +1,80 @@
+{% extends "template/layout.static.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+	<div class="col-md-8">
+		<div class="card">
+			<div class="card-header">Contact</div>
+			<div class="card-body">
+				<form method="POST" action="contact">
+					{% if errors %}
+					<div class="alert alert-danger">
+						<span style="display:inline-block; float: left; margin-right:10px ;height: 30px; width: 30px;">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+								stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+									d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+							</svg>
+						</span>
+
+						{% for key in errors %}
+						<li> {{ key.errors[0] }} </li>
+						{% endfor %}
+
+					</div>
+					{% endif %}
+					{% if success %}
+					<div class="alert alert-success">
+						<span style="display:inline-block; float: left; margin-right:10px ;height: 30px; width: 30px;">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+								stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+									d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+						</span>
+
+
+						<p>Your message was sent successfully</p>
+					</div>
+					{% endif %}
+
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input id="name" type="text" class="form-control " name="name" value="{{ field.post.name }}"
+							autocomplete="name" autofocus>
+						<small class="form-text text-danger">{{ errors.name.errors[0] }}</small>
+					</div>
+
+					<div class="form-group">
+						<label for="email">E-Mail Address</label>
+						<input id="email" type="email" class="form-control " name="email" value="{{ field.post.email }}"
+							autocomplete="email" autofocus>
+						<small class="form-text text-danger">{{ errors.email.errors[0] }}</small>
+					</div>
+
+					<div class="form-group">
+						<label for="phone">Telephone</label>
+						<input id="phone" type="text" class="form-control" name="phone" value="{{ field.post.phone }}"
+							autocomplete="phone" autofocus>
+						<small class="form-text text-danger">{{ errors.phone.errors[0] }}</small>
+					</div>
+
+					<div class="form-group">
+						<label for="message">Message</label>
+						<small class="form-text text-danger">{{ errors.message.errors[0] }}</small>
+						<textarea class="form-control" id="message" name="message"
+							rows="5">{{ field.post.message }}</textarea>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" name="Submit" class="btn btn-primary">
+							Send Message
+						</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+{% endblock %}
