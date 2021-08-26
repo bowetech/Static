@@ -20,7 +20,6 @@
         }
     },
     "require": {
-        "bowetech/static": "^0.0.3",
-        "bowetech/framework": "^0.0.3"
+        "bowetech/static": "^0.0.3"
     }
 }
