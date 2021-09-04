@@ -1,0 +1,11 @@
+{
+  "name": "static",
+  "version": "0.0.3",
+  "description": "<p align=\"center\">\r <a href=\"https://bowetech.com\" target=\"_blank\">\r <img src=\"https://bowetech.com/img/bowetech-logo.png\" width=\"196\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Clive Stewart",
+  "license": "MIT"
+}
